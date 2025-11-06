@@ -1,0 +1,211 @@
+#scisuggests {
+    margin-top: 20vh;
+    margin-right: 3vw;
+    float: right;
+    width: 40vw;
+    height: 50vh;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 2vw;
+    padding: 10px;
+}
+
+#scisuggests img {
+    width: 13vw;
+    height: 13vh;
+    border-radius: 30px;
+    transition: all 0.1s;
+}
+
+#scisuggests img:hover {
+    transform: scale(1.05);
+}
+
+#info {
+    width: 100vw;
+    text-align: center;
+}
+
+#info p {
+    color: var(--light-color);
+    font-size: 1.5vw;
+    font-family: 'Rubik', sans-serif;
+}
+
+#searchcat {
+    margin-top: 80px;
+    width: 100vw;
+    height: 50px;
+    margin-bottom: 10vh;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#firstcatrow {
+    width: 100vw;
+    height: 5vh;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+    gap: 1vw;
+    justify-content: center;
+    text-align: center;
+}
+
+/* searchbar */
+
+input[type='text'] {
+    background-image: url('/assets/styles/search--v1.png');
+    background-size: 1.25vw;
+    background-position: right 10px center;
+    /* Move image to the right */
+    background-repeat: no-repeat;
+    padding-right: 2.5%;
+    /* Ensure there's space for the image on the right */
+}
+
+input[type='text']::placeholder {
+    color: #AAADBE;
+    /* Set placeholder color */
+    font-weight: 700;
+    /* Make placeholder text bold */
+}
+
+.selectedCategory {
+    opacity: 1;
+}
+
+.unselectedCategory {
+    opacity: 0.45;
+}
+
+#topText {
+    margin-top: 93px;
+    color: var(--light-color);
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#noSearch {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#noSearch p {
+    color: var(--light-color);
+    font-size: 1vw;
+    font-family: 'Rubik', sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
+
+#newbanner {
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#newbanner img {
+    width: 80px;
+    height: 80px;
+}
+
+#filteredGames {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    margin-top: 30px;
+    box-sizing: border-box;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#adhorz {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 1023px) {
+    input[type='text'] {
+        background-size: 5.25vw;
+    }
+
+    #topText {
+        font-size: 24px;
+    }
+
+    #filteredGames {
+        margin-top: 5px;
+    }
+}
+
+@media (min-width: 330px) {
+    #filteredGames {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 590px) {
+    #filteredGames {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 850px) {
+    #filteredGames {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1080px) {
+    #filteredGames {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1250px) {
+    #filteredGames {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+
+#filteredGames #gameDiv,
+#filteredGames #gameDiv .imageCon img,
+#filteredGames #gameDiv:after {
+    width: 100%;
+}
+
+
+#pageDescription {
+  background-color: #020202;     /* light gray background */
+  padding: 20px;                 /* space inside the box */
+  margin: 20px 0;                /* vertical spacing above & below */
+  border-radius: 8px;            /* rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle drop-shadow */
+  line-height: 1.6;              /* a bit more readable text */
+  color: #ffffff;
+}
+
+/* Optional: headings and links inside */
+#pageDescription h2 {
+  margin-top: 0;
+}
+
+#pageDescription a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+#pageDescription a:hover {
+  text-decoration: underline;
+}
